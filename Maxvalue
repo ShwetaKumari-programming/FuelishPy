@@ -1,0 +1,11 @@
+def f(x):
+    l = {}
+    for v in x:
+        if v in l:
+            l[v] += 1
+        else:
+            l[v] = 0
+    return list(l.keys())[list(l.values()).index(max(l.values()))]
+
+x = [1,1,1,2,2,2,2,2,3,3]
+print(f(x))
